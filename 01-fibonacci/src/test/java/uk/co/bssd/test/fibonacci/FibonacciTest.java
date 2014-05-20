@@ -18,6 +18,11 @@ public class FibonacciTest {
 	public void testSecondNumberInSequence() {
 		assertThat(valueOfSequenceAt(2), is(1));
 	}
+	
+	@Test
+	public void testThirdNumberInSequence() {
+		assertThat(valueOfSequenceAt(3), is(2));
+	}
 
 	private int valueOfSequenceAt(int position) {
 		return generateSequenceOfLength(position)[position-1];
