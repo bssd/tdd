@@ -11,6 +11,14 @@ public class FibonacciTest {
 
 	@Test
 	public void testFirstNumberInSequence() {
-		assertThat(Fibonacci.generate(1)[0], is(1));
+		assertThat(valueOfSequenceAt(1), is(1));
+	}
+
+	private int valueOfSequenceAt(int position) {
+		return generateSequenceOfLength(position)[position-1];
+	}
+	
+	private int[] generateSequenceOfLength(int sequenceLength) {
+		return Fibonacci.generate(sequenceLength);
 	}
 }
